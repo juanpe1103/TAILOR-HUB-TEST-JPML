@@ -1,7 +1,7 @@
 # TailorHub Restaurantes – PRUEBA
 ACLARACIONES: 
 - Para cumplir con el diseño de Figma, la posición en el mapa de cada restaurante, se modifica en la pantalla de edición de restaurante.
-- Al hacer clic en un marcador del mapa, la vista de la lista se desplaza automáticamente con scroll hasta el restaurante correspondiente y la visualización del restaurante correspondiente aumentará su opacidad.
+- Al hacer clic en un marcador del mapa, la vista de la lista hace scroll automático hasta el restaurante correspondiente, que además se resalta aumentando su opacidad.
 
 BONUS:
 - Edición de restaurante añadido con posibles nuevos campos.
