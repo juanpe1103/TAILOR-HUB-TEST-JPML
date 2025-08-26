@@ -3,11 +3,13 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { useAuth } from '@/lib/store';
 import clsx from 'clsx';
+import {useRouter} from "next/navigation";
 
 export function AuthStatus() {
     const { user, logout } = useAuth();
     const [open, setOpen] = useState(false);
     const popRef = useRef<HTMLDivElement>(null);
+    const router = useRouter();
 
     useEffect(() => {
         function onDocClick(e: MouseEvent) {
@@ -67,7 +69,7 @@ export function AuthStatus() {
                     <button
                         className="mt-2 w-full bg-white text-black px-3 py-2 rounded-xl"
                         role="menuitem"
-                        onClick={() => { setOpen(false); logout(); }}
+                        onClick={() => { setOpen(false); logout(); router.push("/");}}
                     >
                         Salir
                     </button>

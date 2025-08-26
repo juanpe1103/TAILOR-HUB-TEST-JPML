@@ -36,11 +36,11 @@ test('cada tarjeta de restaurante muestra nombre e imagen', async ({ page }) => 
     await expect(firstCard.locator('h2, h3')).toBeVisible(); // el título está en un h2 o h3
 });
 
-test('en la página de un restaurante aparece la caja de comentarios (sin loguearse)', async ({ page }) => {
+test('en la página de un restaurante no aparece la caja de comentarios (sin loguearse)', async ({ page }) => {
     await page.goto('/');
     await page.locator('a[href^="/restaurants/"]').first().click();
 
-    // Comprueba que el textarea de comentarios aparece
-    const commentBox = page.getByPlaceholder(/comentario/i);
-    await expect(commentBox).toBeVisible();
+    // Comprueba directamente que no existe ningún textarea con placeholder "comentario"
+    const count = await page.getByPlaceholder(/comentario/i).count();
+    expect(count).toBe(0);
 });
