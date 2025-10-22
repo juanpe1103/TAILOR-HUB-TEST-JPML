@@ -3,7 +3,6 @@ const next = require("next");
 const path = require("path");
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Server running on ${port}`));
 const dev = process.env.NODE_ENV !== "production";
 
 // FRONT: /web
