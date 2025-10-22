@@ -1,10 +1,9 @@
 {
   "name": "next-express-fullstack",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
-    "build": "npm install --prefix web && npm run build --prefix web && npm run build:api",
-    "build:api": "cd api && npx tsc",
+    "build": "npm install --prefix web && npm run build --prefix web && npm install --prefix api && npm run build:api",
+    "build:api": "cd api && npm install && npx tsc",
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
@@ -13,6 +12,10 @@
     "react": "latest",
     "react-dom": "latest",
     "ts-node": "^10.9.2",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "zod": "^3.23.8"
   }
 }
