@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "npm install --prefix web && npm run build --prefix web && npm install --prefix api && npm run build:api",
-    "build:api": "cd api && npm install && npx tsc",
+    "build:api": "cd api && npm run build",
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
